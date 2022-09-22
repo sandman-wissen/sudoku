@@ -42,6 +42,7 @@ $(function () {
         return deferred.promise();
     },
     update: function(key, values) {
+      values.solvedString = 
       console.log(JSON.stringify(values));
         var deferred = $.Deferred();
         $.ajax({
@@ -63,7 +64,7 @@ $(function () {
     columnAutoWidth: true,
     editing: {
       mode: "popup",
-      allowUpdating: true,
+      allowUpdating: false,
       allowDeleting: true,
     },
   });

@@ -46,12 +46,13 @@ namespace sudoku_api.Controllers
         // PUT: api/Sudoku/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSudokuSolverData(int id, SudokuSolverData sudokuSolverData)
+        public async Task<IActionResult> PutSudokuSolverData(int id, [FromBody] SudokuSolverData sudokuSolverData)
         {
             if (id != sudokuSolverData.Id)
             {
                 return BadRequest();
             }
+
 
             _context.Entry(sudokuSolverData).State = EntityState.Modified;
 
