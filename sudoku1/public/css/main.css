@@ -1,0 +1,200 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+      url("../assets/fonts/Poppins-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url("../assets/fonts/Poppins-Bold.woff2") format("woff2"),
+      url("../assets/fonts/Poppins-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  body {
+    font-family: "Poppins";
+  }
+  
+  .mainTitle {
+    font-family: "Poppins-Bold";
+    margin: 2rem;
+    color: #3f51b5;
+    text-shadow: 1px 1px 0px #4f4d4d;
+  }
+  
+  #gameBody {
+    margin: 2rem;
+  }
+  
+  /* Sudoku Board */
+  
+  .sudoku {
+    display: flex;
+  }
+  
+  .sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-gap: 0;
+    border: 10px solid #527caa;
+    border-radius: 13px;
+  }
+  
+  .sudoku-board input {
+    box-sizing: content-box;
+    width: 50px;
+    height: 50px;
+    font-size: 0.8em;
+    transition: 0.2s;
+    margin: 0;
+    outline: 0;
+    padding: 5px;
+    text-align: center;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    color: #5377ad;
+    font-family: "Poppins-Bold";
+  }
+  
+  .sudoku-board input:nth-child(-n + 9) {
+    border-top: none;
+  }
+  
+  .sudoku-board input:nth-child(9n) {
+    border-right: none;
+  }
+  
+  .sudoku-board input[data-row="3"],
+  .sudoku-board input[data-row="6"] {
+    border-top: 3px solid #5377ad;
+  }
+  .sudoku-board input[data-col="3"],
+  .sudoku-board input[data-col="6"] {
+    border-left: 3px solid #5377ad;
+  }
+  
+  .js-solve {
+    margin-top: 2rem;
+  }
+  
+  /* Controls */
+  
+  .controls {
+    margin: 0 0 0 5rem;
+    background: #07ffb6;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 50%;
+    position: relative;
+  }
+  
+  .js-examples-select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins";
+    box-shadow: 1px 1px 1px 0px #9f9696;
+  }
+  
+  .puzzleBtns button {
+    background-color: #434548;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #e5e5e5;
+    cursor: pointer;
+  }
+  
+  .puzzleBtns button:hover {
+    background-color: #a39a9a;
+    color: #302e2e;
+  }
+  
+  .stats {
+    margin-top: 1rem;
+    font-family: "Poppins-Bold";
+  }
+  
+  .js-submit {
+    background-color: #673ab7;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #e5e5e5;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .submitResult {
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+  }
+  
+  .submitResult input {
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    height: 2.3rem;
+    padding: 0 0.4rem;
+  }
+  
+  .navigationLnk {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    background: #3f51b5;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: "Poppins-Bold";
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .navigationLnk:hover {
+    background: #777575;
+    font-family: "Poppins";
+    color: #fff;
+  }
+  
+  #dataGrid {
+      margin: 2rem;
+  }
+  
+  #dataGrid .dx-datagrid {
+      color: #fffefe;
+      background-color: #3b3c3e;
+      line-height: inherit;
+      padding: 2rem 0;
+      border-radius: 5px;
+  }
+  
+  .dx-datagrid-content table tr:nth-child(even) {
+      background-color: #838282;
+  }
+  
+  .dx-datagrid .dx-link {
+      background-color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+  
+  .dx-datagrid-headers {
+      color: #149ef5;
+      font-family: 'POPPINS-BOLD';
+  }
+  

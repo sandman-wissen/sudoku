@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+ 
+    <!-- DevExtreme theme -->
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/22.1.5/css/dx.light.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+
+<div class="mainTitle"><h1>Sudoku Puzzle Solver</h1></div>
+
+<div id="gameBody">
+    
+</div>
+    
+</body> 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://cdn3.devexpress.com/jslib/22.1.5/js/dx.all.js"></script>
+<script src="js/main.js"></script>
+<script type="module">
+    import { Sudoku, examples } from '/js/sudoku.js';
+    let sdk = new Sudoku(document.querySelector("#gameBody"));
+    let board = examples[6].slice(1);
+    sdk.container.querySelector("select").value = board.join(",");
+    sdk.writeBoard(board, true);
+   </script>
+</html>
